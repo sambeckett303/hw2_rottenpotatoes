@@ -13,7 +13,8 @@ class MoviesController < ApplicationController
     if(params[:sort].to_s == 'title')
 		@movies = @movies.sort_by{|m| m.title }
 	elsif(params[:sort].to_s == 'release')
-		@movies = @movies.sort_by{|m| m.release_date.to_s
+		@movies = @movies.sort_by{|m| m.release_date.to_s }
+	end
   end
 
   def new
