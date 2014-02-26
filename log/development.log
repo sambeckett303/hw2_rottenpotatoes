@@ -6784,3 +6784,204 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:27:22 -0400
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&sort=release_date" for 127.0.0.1 at 2014-02-25 21:40:26 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13') ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (51.4ms)
+Completed 200 OK in 206ms (Views: 86.8ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-25 21:40:27 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:40:27 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 21:40:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:40:27 -0400
+Served asset /application.js - 304 Not Modified (12ms)
+Connecting to database specified by database.yml
+  [1m[36m (32.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (76.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "Aladdin"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[35m (48.3ms)[0m  commit transaction
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "The Terminator"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[36m (16.9ms)[0m  [1mcommit transaction[0m
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "When Harry Met Sally"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[35m (18.4ms)[0m  commit transaction
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "The Help"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[36m (20.5ms)[0m  [1mcommit transaction[0m
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "Chocolat"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[35m (23.7ms)[0m  commit transaction
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "Amelie"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[36m (22.3ms)[0m  [1mcommit transaction[0m
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "2001: A Space Odyssey"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[35m (20.9ms)[0m  commit transaction
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "The Incredibles"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[36m (21.4ms)[0m  [1mcommit transaction[0m
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "Raiders of the Lost Ark"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[35m (19.5ms)[0m  commit transaction
+WARNING: Can't mass-assign protected attributes: rating, release_date
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00], ["description", nil], ["rating", nil], ["release_date", nil], ["title", "Chicken Run"], ["updated_at", Wed, 26 Feb 2014 01:46:48 UTC +00:00]]
+  [1m[36m (21.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-25 21:57:50 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&sort=release_date
+  [1m[36mMovie Load (4.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13') ORDER BY release_date[0m
+Completed 302 Found in 117ms (ActiveRecord: 42.9ms)
+
+
+Started GET "/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&sort=release_date" for 127.0.0.1 at 2014-02-25 21:57:51 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (71.3ms)
+Completed 200 OK in 167ms (Views: 164.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-25 21:57:51 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:51 -0400
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:51 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&commit=Refresh" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes", "R"=>"yes"}, "commit"=>"Refresh"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=release_date
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY release_date[0m
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=release_date" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes", "R"=>"yes"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:57:56 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/movies?sort=title" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=title
+  [1m[36mMovie Load (4.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY title[0m
+Completed 302 Found in 14ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=title" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes", "R"=>"yes"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?sort=release_date" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=release_date
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY release_date[0m
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=yes&ratings%5BPG%5D=yes&ratings%5BPG-13%5D=yes&ratings%5BR%5D=yes&sort=release_date" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"yes", "PG"=>"yes", "PG-13"=>"yes", "R"=>"yes"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Served asset /application.css - 304 Not Modified (50ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
